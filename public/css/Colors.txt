@@ -1,0 +1,7 @@
+Primary Mint green
+  Hex: 5d8a8d
+  RGB: 93, 138,141
+
+Off-White main:
+  HEX:
+  RGB:
