@@ -103,7 +103,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(93, 138, 141, 0);
-  overflow: scroll;
 }
 
 hr {
@@ -346,11 +345,17 @@ label {
 button {
   border-radius: 50%;
   position:fixed;
-  background-color: rgba(220, 53, 69, 0.25); 
+  background-color: rgba(93, 138,141); 
+  border: none;
+  outline: none;
 }
 
 button:focus:not(:focus-visible) {
-  outline:invert;
+  outline: none;
+}
+
+button:active{
+  background-color: rgba(93, 138, 141, 0.85);
 }
 
 input,
@@ -11421,23 +11426,27 @@ footer a {
 	}
 
 	.cards {
-		padding: 0;
 		display: flex;
 		justify-content: center;
 		width: 100%;
 		gap: 2rem;
 		padding: 1rem;
 		flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 	}
 
 	.card {
-		width: 200%;
+    flex: 0 0 auto;
+		width: 84%;
 		aspect-ratio: 2/3;
 		display: block;
 		position: relative;
 		border-radius: 1rem;
-		max-width: 220px;
-		min-width: 100px;
+		max-width: 84%;
+		min-width: 200px;
 		background-color: grey;
 	}
 
@@ -11461,23 +11470,18 @@ footer a {
 	}
 
 	.add-btn {
-		--icon: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGxpbmUgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjMycHgiIHgxPSIyNTYiIHgyPSIyNTYiIHkxPSIxMTIiIHkyPSI0MDAiLz48bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MzJweCIgeDE9IjQwMCIgeDI9IjExMiIgeTE9IjI1NiIgeTI9IjI1NiIvPjwvc3ZnPg==);
-		width: 3rem;
-		height: 3rem;
-		padding: 0.5rem;
-		border: 4px solid;
 		border-radius: 50%;
-		background: aliceblue var(--icon) no-repeat 50% 50% / 70%;
-		color: blue;
+    background-color: var(--bs-primary-rgb);
 		cursor: pointer;
     position: fixed;
-    /* bottom: 20px;
-    right: 20px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds drop shadow */
+    bottom: 70px; 
+    right: 35px;
+  }
 
-		&:hover {
-			background-color: cornflowerblue;
+	.add-btn:hover {
+			background-color: rgba(0,0,0, .85);
 		}
-	}
 
 	.sr-only {
 		border: 0;
