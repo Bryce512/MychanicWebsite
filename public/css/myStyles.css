@@ -97,3 +97,7 @@ li {
   font-style: italic;
   color: darkslategray;
 }
+
+form-group {
+  margin: 10px 10px;
+}

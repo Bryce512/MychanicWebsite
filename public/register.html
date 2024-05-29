@@ -34,9 +34,9 @@
             <div class="container">
                 <div class="text-center">
                     <br>
-                    <h2 class="section-heading text-uppercase">Login to mychanic</h2>
+                    <h2 class="section-heading text-uppercase">register for mychanic</h2>
                     <h3 class="section-subheading text-muted">
-                        Enter your login credentials below
+                        Enter the information below
                     </h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
@@ -50,17 +50,35 @@
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <!-- Name input-->
+                                <!-- Username Input -->
                                 <input class="form-control" id="username" type="text" placeholder="username *" data-sb-validations="required"/>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A username is required.</div>
                             </div>
+                            <br>
                             <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="password" type="password" placeholder="password *" data-sb-validations="required,password" />
-                                <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
+                                <!-- Email Input -->
+                                <input class="form-control" id="email" type="email" placeholder="email *" data-sb-validations="required"/>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A email is required.</div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <!-- Password Input -->
+                                <input class="form-control" id="password" type="password" placeholder="password *" data-sb-validations="required"/>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A password is required.</div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <!-- PHone Number Input -->
+                                <input class="form-control" id="phonenum" type="text" placeholder="phone number *" data-sb-validations="required"/>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A phone number is required.</div>
                             </div>
                         </div>
                     </div>
+                    <script>
+                        const submitButton = document.querySelector('#submitButton');
+                            
+
+                    </script>
                     <!-- Submit success message-->
                     <!---->
                     <!-- This is what your users will see when the form-->
@@ -79,11 +97,10 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Login</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase enabled" id="submitButton" type="submit">register</button></div>
                 </form>
             </div>
         </section>
-
 
 
 
@@ -98,5 +115,6 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+
 
 <!-- TODO: center the forms on the webpage -->
