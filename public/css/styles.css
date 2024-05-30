@@ -74,7 +74,7 @@
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
   --bs-link-color: rgba(93, 138, 141, 1);
-  --bs-link-hover-color: rgba(93, 138, 141, .60);
+  --bs-link-hover-color: rgba(255,255,255, .75);
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
   --mychanic-btn: rgba(93, 138, 141, 1);
@@ -342,13 +342,13 @@ label {
   display: inline-block;
 }
 
-button {
+/* button {
   border-radius: 50%;
   position:fixed;
   background-color: rgba(93, 138,141); 
   border: none;
   outline: none;
-}
+} */
 
 button:focus:not(:focus-visible) {
   outline: none;
@@ -11423,60 +11423,71 @@ footer a {
 		place-items: center;
 		padding: 2rem 0;
 		font-family: system-ui, sans-serif;
+    justify-content: center;
 	}
 
 	.cards {
 		display: flex;
-		justify-content: center;
-		width: 100%;
+		justify-content: flex-start;
+		width: 100%; 
+    height: 100%;
 		gap: 2rem;
-		padding: 1rem;
-		flex-wrap: wrap;
-    flex-direction: row;
+		padding: 0 1rem;
+    flex-direction: row;  
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    /* max-width: 100%; Make sure it does not overflow the body */
+    margin: 0 auto; /* Center the cards container */
+    box-sizing: border-box; /* Include padding in width calculations */
 	}
 
 	.card {
     flex: 0 0 auto;
-		width: 84%;
+		width: 40vw;
 		aspect-ratio: 2/3;
 		display: block;
 		position: relative;
 		border-radius: 1rem;
-		max-width: 84%;
-		min-width: 200px;
+		max-width: 200px;
 		background-color: grey;
+    overflow: hidden;
+    max-width: 100%;
+    /* padding-top: calc(100% * 3/4); */
+    
 	}
 
 	.delete-btn {
 		--icon: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PHBhdGggZD0iTTExMiwxMTJsMjAsMzIwYy45NSwxOC40OSwxNC40LDMyLDMyLDMySDM0OGMxNy42NywwLDMwLjg3LTEzLjUxLDMyLTMybDIwLTMyMCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjMycHgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLXdpZHRoOjMycHgiIHgxPSI4MCIgeDI9IjQzMiIgeTE9IjExMiIgeTI9IjExMiIvPjxwYXRoIGQ9Ik0xOTIsMTEyVjcyaDBhMjMuOTMsMjMuOTMsMCwwLDEsMjQtMjRoODBhMjMuOTMsMjMuOTMsMCwwLDEsMjQsMjRoMHY0MCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjMycHgiLz48bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MzJweCIgeDE9IjI1NiIgeDI9IjI1NiIgeTE9IjE3NiIgeTI9IjQwMCIvPjxsaW5lIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDA7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS13aWR0aDozMnB4IiB4MT0iMTg0IiB4Mj0iMTkyIiB5MT0iMTc2IiB5Mj0iNDAwIi8+PGxpbmUgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLXdpZHRoOjMycHgiIHgxPSIzMjgiIHgyPSIzMjAiIHkxPSIxNzYiIHkyPSI0MDAiLz48L3N2Zz4=);
 		position: absolute;
-		bottom: -0.75rem;
-		right: -0.75rem;
+		bottom: 5rem;
+		right: 1rem;
+    bottom: 1rem;
 		width: 3rem;
 		height: 3rem;
 		padding: 0.5rem;
 		border: 4px solid;
-		border-radius: 100%;
+		border-radius: 50%;
 		background: aliceblue var(--icon) no-repeat 50% 50% / 70%;
-		color: white;
+		color: rgb(var(--bs-primary-rgb));
 		cursor: pointer;
-
-		&:hover {
-			background-color: orangered;
-		}
+    z-index: 1;
 	}
+
+  .delete-btn:hover {
+    background-color: rgba(0,0,0, .65);
+  }
 
 	.add-btn {
 		border-radius: 50%;
-    background-color: var(--bs-primary-rgb);
+    background-color: rgb(var(--bs-primary-rgb)) ;
 		cursor: pointer;
     position: fixed;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds drop shadow */
-    bottom: 70px; 
+    bottom: 90px; 
     right: 35px;
+    border: none;
+    outline: none;
   }
 
 	.add-btn:hover {
@@ -11497,43 +11508,17 @@ footer a {
 	}
 
 	footer {
+    display: flex;
 		text-align: center;
 		font-style: italic;
 		line-height: 1.42;
+    justify-content:space-around;
+    align-items: center;
 	}
+
+
 }
-
-@layer warning {
-	.warning {
-		box-sizing: border-box;
-		padding: 1em;
-		margin: 1em 0;
-		border: 1px solid #ccc;
-		background: rgba(255 255 205 / 0.8);
-		text-align: center;
-	}
-
-	.warning > :first-child {
-		margin-top: 0;
-	}
-
-	.warning > :last-child {
-		margin-bottom: 0;
-	}
-
-	.warning a {
-		color: blue;
-	}
-	.warning--info {
-		border: 1px solid #123456;
-		background: rgb(205 230 255 / 0.8);
-	}
-	.warning--alarm {
-		border: 1px solid red;
-		background: #ff000010;
-	}
 
   .column{
     margin-top: 72px;
   }
-}
