@@ -10886,6 +10886,7 @@ p {
   justify-content: center;
   padding: 0;
   border-radius: 100%;
+
 }
 
 #mainNav {
@@ -11131,7 +11132,7 @@ header.masthead .masthead-heading {
 }
 .timeline > li .timeline-image {
   position: absolute;
-  z-index: 100;
+  /* z-index: 100; */
   left: 0;
   width: 80px;
   height: 80px;
@@ -11323,15 +11324,15 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 60px;
+  /* position: fixed; */
+  height: auto;
   width: 100%;
   background-color: #5d8a8d;
-  padding: 10px 0;
   text-align: center;
   align-content: center;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
 footer a {
@@ -11491,7 +11492,9 @@ footer a {
   }
 
 	.add-btn:hover {
-			background-color: rgba(0,0,0, .85);
+    background-color: rgba(0,0,0, .85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds drop shadow */
+
 		}
 
 	.sr-only {
@@ -11507,14 +11510,14 @@ footer a {
 		white-space: nowrap;
 	}
 
-	footer {
+	/* footer {
     display: flex;
 		text-align: center;
 		font-style: italic;
 		line-height: 1.42;
     justify-content:space-around;
     align-items: center;
-	}
+	} */
 
 
 }
